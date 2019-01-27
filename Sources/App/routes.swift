@@ -13,7 +13,8 @@ public func routes(_ router: Router) throws {
   
   router.post(CompileRequest.self, at: "compile") { req, compile -> String in
     do {
-      let stream = TextStream(string: compile.code)
+      let code = compile.code.replacingOccurrences(of: "\r", with: "")
+      let stream = TextStream(string: code)
       let atheris = Atheris(inputStream: stream)
       let output = try atheris.compile() as! TextOutputStream
       return output.buffer

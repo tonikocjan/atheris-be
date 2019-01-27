@@ -559,7 +559,7 @@ extension RacketCodeGenerator: CodeGenerator {
       guard let code = bindingCodeStack.last else { return }
       print("(null? \(code))")
     case .nestedPattern:
-      throw NSError(domain: "", code: 0, userInfo: nil
+      throw NSError(domain: "", code: 0, userInfo: nil)
     case .binding:
       break
     case .none:

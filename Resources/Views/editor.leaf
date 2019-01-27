@@ -1,0 +1,11 @@
+#set("title") { SML -> Racket 🚀 }
+
+#set("body") {
+<form action="/compile" method="POST">
+<textarea name="code" placeholder="Enter SML code ..." rows="4" cols="50">
+</textarea>
+<input type="submit" value="Compile!">
+</form>
+}
+
+#embed("base")

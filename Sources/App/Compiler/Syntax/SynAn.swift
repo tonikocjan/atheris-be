@@ -337,7 +337,7 @@ private extension SynAn {
     let startingPosition = symbol.position
     nextSymbol()
     let recordRow = try parseRecordRow()
-    throw NSError()
+    throw NSError(domain: "", code: 0, userInfo: nil
   }
 }
 

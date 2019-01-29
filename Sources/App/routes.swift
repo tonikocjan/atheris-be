@@ -2,31 +2,26 @@ import Vapor
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
-  // "It works" page
   router.get { req in
-    return try req.view().render("welcome")
+    return try req.view().render("compiler")
   }
   
-  router.get("racket") { req in
-    return try req.view().render("editor")
-  }
-  
-  router.post(CompileRequest.self, at: "compile") { req, compile -> String in
+  router.post(CompileRequest.self) { req, compile -> Future<View> in
+    let code = compile.code.replacingOccurrences(of: "\r", with: "")
+    let stream = TextStream(string: code)
+    let atheris = Atheris(inputStream: stream)
     do {
-      let code = compile.code.replacingOccurrences(of: "\r", with: "")
-      let stream = TextStream(string: code)
-      let atheris = Atheris(inputStream: stream)
       let output = try atheris.compile() as! TextOutputStream
-      return output.buffer
+      let executor = Executor()
+      return try req.view().render("compiler",
+                                   ["output": output.buffer,
+                                    "code": code])
     } catch {
-      return error.localizedDescription
+      let errorMessage = (error as? AtherisError)?.errorMessage ?? error.localizedDescription.replacingOccurrences(of: "\n", with: "\r\n")
+      
+      return try req.view().render("compiler",
+                                   ["error": errorMessage,
+                                    "code": code])
     }
-  }
-  
-  // Says hello
-  router.get("hello", String.parameter) { req -> Future<View> in
-    return try req.view().render("hello", [
-      "name": req.parameters.next(String.self)
-      ])
   }
 }

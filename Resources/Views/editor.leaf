@@ -1,11 +1,17 @@
-#set("title") { SML -> Racket 🚀 }
-
-#set("body") {
-<form action="/compile" method="POST">
-<textarea name="code" placeholder="Enter SML code ..." rows="4" cols="50">
-</textarea>
-<input type="submit" value="Compile!">
-</form>
-}
-
-#embed("base")
+<div style="width: 70%">
+  <form action="/" method="POST">
+    <textarea
+      id="code"
+      style="width: 100%"
+      name="code"
+      placeholder="Enter SML code ..."
+      rows="20"
+      cols="50"
+      autofocus="true">#(code)</textarea>
+    <input type="submit" value="Compile!" />
+  </form>
+  <script>
+    var editor = CodeMirror.fromTextArea(code, {lineNumbers: true});
+  </script>
+  <h4 style="color: red">#(error)</h4>
+</div>

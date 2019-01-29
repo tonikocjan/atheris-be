@@ -1,2 +1,4 @@
 type: "vapor"
 swift_version: "4.2.0"
+force_tls: true
+

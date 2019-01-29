@@ -1,0 +1,8 @@
+#set("title") { 🚀🚀🚀 }
+#set("body") {
+  <!-- Input form -->
+  #embed("editor")
+  <!-- Highlight.js -->
+  #embed("code")
+}
+#embed("base")

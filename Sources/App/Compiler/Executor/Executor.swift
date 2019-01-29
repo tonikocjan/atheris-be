@@ -10,6 +10,7 @@ import Foundation
 
 protocol ExecutorProtocol {
   func execute(file: String) throws
+  func execute(code: String) throws
 }
 
 class Executor: ExecutorProtocol {
@@ -26,5 +27,9 @@ class Executor: ExecutorProtocol {
     task.terminationHandler = {
       print("\nExecution ended with status: \($0.terminationStatus)")
     }
+  }
+  
+  func execute(code: String) throws {
+    
   }
 }

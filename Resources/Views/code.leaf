@@ -1,0 +1,7 @@
+#if(output) {
+<div style="width: auto">
+  <pre>
+    <code class="html">#(output)</code>
+  </pre>
+</div>
+}

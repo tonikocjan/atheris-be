@@ -16,15 +16,15 @@ protocol LoggerProtocol {
 
 class Logger: LoggerProtocol {
   func log(message: String) {
-    print(message)
+    fputs(message, stderr)
   }
   
   func error(message: String) {
-    print("❗️ " + message)
+    fputs(message, stderr)
   }
   
   func warning(message: String) {
-    print("⚠ " + message)
+    fputs(message, stderr)
   }
 }
 

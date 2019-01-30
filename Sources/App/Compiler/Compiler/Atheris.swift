@@ -34,28 +34,29 @@ class Atheris {
       let synan = SynAn(lexan: lexan)
       let ast = try synan.parse()
       syntaxTree = ast
+      logger.log(message: "Successfully parsed ast")
       
       // Name resolving
       let nameChecker = NameChecker(symbolTable: symbolTable,
                                     symbolDescription: symbolTable.symbolDescription)
       try nameChecker.visit(node: ast)
+      logger.log(message: "Successfully resolved names")
       
       // Type resolving
       let typeChecker = TypeChecker(symbolTable: symbolTable,
                                     symbolDescription: symbolTable.symbolDescription)
       try typeChecker.visit(node: ast)
-      
-      // Dump ast
-      try dumpAst(ast: ast,
-                  symbolDescription: symbolTable.symbolDescription)
+      logger.log(message: "Successfully parsed types")
       
       // Code generation
       let outputStream = TextOutputStream()
       let codeGenerator = RacketCodeGenerator(outputStream: outputStream,
                                               configuration: .standard, symbolDescription: symbolTable.symbolDescription)
       try codeGenerator.visit(node: ast)
+      logger.log(message: "Successfully generated racket code")
       return outputStream
     } catch {
+      logger.log(message: "Error: \(error.localizedDescription)")
       if let syntaxTree = syntaxTree {
         try dumpAst(ast: syntaxTree,
                     symbolDescription: symbolTable.symbolDescription)

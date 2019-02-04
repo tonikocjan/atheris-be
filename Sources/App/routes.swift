@@ -7,13 +7,6 @@ public func routes(_ router: Router) throws {
   }
   
   router.post(CompileRequest.self) { req, compile -> Future<View> in
-    switch 10 {
-    case 0...:
-      break
-    default:
-      break
-    }
-    
     let code = compile.code.replacingOccurrences(of: "\r", with: "")
     let stream = TextStream(string: code)
     let atheris = Atheris(inputStream: stream)

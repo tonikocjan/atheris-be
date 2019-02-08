@@ -7,14 +7,14 @@ public func routes(_ router: Router) throws {
   }
   
   router.post(CompileRequest.self) { req, compile -> Future<View> in
-    LoggerFactory.logger.log(message: "Inside request ...")
+//    LoggerFactory.logger.log(message: "Inside request ...")
     #if os(Linux)
     let code = compile.code.replacingOccurrences(of: "\r", with: "", options: .regularExpression)
     #else
     let code = compile.code.replacingOccurrences(of: "\r", with: "")
     #endif
     let stream = TextStream(string: code)
-    LoggerFactory.logger.log(message: "After stream defined ...")
+//    LoggerFactory.logger.log(message: "After stream defined ...")
     do {
       let atheris = try Atheris(inputStream: stream)
       let output = try atheris.compile()

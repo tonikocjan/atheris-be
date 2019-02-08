@@ -337,7 +337,7 @@ private extension SynAn {
     let startingPosition = symbol.position
     nextSymbol()
     let recordRow = try parseRecordRow()
-    throw NSError()
+    throw NSError(domain: "atheris.syntax.parser.error", code: 97, userInfo: ["error": "not yet implemented"])
   }
 }
 

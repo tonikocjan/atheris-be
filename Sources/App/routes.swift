@@ -17,7 +17,7 @@ public func routes(_ router: Router) throws {
 //    LoggerFactory.logger.log(message: "After stream defined ...")
     do {
       let atheris = try Atheris(inputStream: stream)
-      let output = try atheris.compile()
+      let output = try atheris.compile() as! TextOutputStream
       return try req.view().render("compiler",
                                    ["output": output.buffer,
                                     "code": code])

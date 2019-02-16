@@ -2,8 +2,12 @@
   <div id="console-loader" class="lds-roller" style="display: none"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   
   <div id="console" style="display: block; height: 100%">
-    <pre style="height: 93%;">
-      <code class="html">#(result)</code>
-    </pre>
+      <code class="html hljs lisp">
+        #for(output in consoleStack) {
+        <span class="hljs-number">#(compilerName) [#(compilerVersion)]:</span>
+        <span class="hljs-comment">#(output)</span>
+        <br>
+        }
+      </code>
   </div>
 </div>

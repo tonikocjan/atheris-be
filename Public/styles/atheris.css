@@ -46,7 +46,7 @@
   center: 0 auto 0;
   
   position: absolute;
-  left: 75%;
+  left: 58%;
   top: 32%;
   -webkit-transform: translate(-75%, -32%);
   transform: translate(-75%, -32%);
@@ -59,8 +59,8 @@
   position: absolute;
   z-index: 100;
   center: 0 auto 0;
-  left: 75%;
-  top: 32%;
+  left: 71%;
+  top: 27%;
   -webkit-transform: translate(50%, -50%);
   transform: translate(-50%, -50%);
   display: inline-block;

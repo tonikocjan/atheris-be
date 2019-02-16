@@ -6,7 +6,7 @@
     placeholder="Enter SML code ..."
     rows="20"
     cols="50"
-    autofocus="true">#(code)</textarea>
+    autofocus="true">#(smlCode)</textarea>
   <div class="run">
     <input id="compile-btn" onclick="showHide()" type="image" src="/images/rocket.png" style="width: 55px; height: 55px">
   </div>

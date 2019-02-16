@@ -3,8 +3,8 @@
   
   <div id="code" style="display: block; height: 100%">
     <pre style="height: 93%;">
-      #if(output) {
-      <code class="html">#(output)</code>
+      #if(racketCode) {
+      <code class="html">#(racketCode)</code>
       } elseif(error) {
       <code class="html hljs-string">#(error)</code>
       } else {

@@ -14,20 +14,15 @@ public protocol ExecutorProtocol {
 
 public class Executor: ExecutorProtocol {
   public func execute(file: String, completion: @escaping (String) -> Void) throws {
-    print("Executing \(file) ...")
-    
     let pipe = Pipe()
     let task = Process()
     task.arguments = [file]
     task.standardOutput = pipe
     task.currentDirectoryPath = FileManager.default.currentDirectoryPath
     task.launchPath = "racket"
-
     task.launch()
     task.waitUntilExit()
     task.terminationHandler = {
-      print("\nExecution ended with status: \($0.terminationStatus)")
-
       let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
                           encoding: .utf8)
       completion(result ?? "")

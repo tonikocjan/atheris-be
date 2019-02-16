@@ -22,15 +22,15 @@ public class Executor: ExecutorProtocol {
     task.standardOutput = pipe
     task.currentDirectoryPath = FileManager.default.currentDirectoryPath
     task.launchPath = "Racket v7.1/bin/racket"
-    completion(FileManager.default.currentDirectoryPath)
-//    task.launch()
-//    task.waitUntilExit()
-//    task.terminationHandler = {
-//      print("\nExecution ended with status: \($0.terminationStatus)")
-//
-//      let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
-//                          encoding: .utf8)
-//      completion(result ?? "")
-//    }
+//    completion(FileManager.default.currentDirectoryPath)
+    task.launch()
+    task.waitUntilExit()
+    task.terminationHandler = {
+      print("\nExecution ended with status: \($0.terminationStatus)")
+
+      let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
+                          encoding: .utf8)
+      completion(result ?? "")
+    }
   }
 }

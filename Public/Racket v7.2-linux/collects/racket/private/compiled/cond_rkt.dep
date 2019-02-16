@@ -1,1 +1,0 @@
-("7.2" racket ("08c1f3747f3c893ebeb256e3afd3f57506fc8ef2" . "01363df28a67a82d7763cdb30c2ddb6522b5ed3a") (collects #"racket" #"private" #"gen-temp.rkt") (collects #"racket" #"private" #"qq-and-or.rkt") (collects #"racket" #"private" #"stx.rkt"))

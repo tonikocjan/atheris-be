@@ -1,1 +1,0 @@
-("7.2" racket ("083678f749278111376753f33721b8842e75befc" . "f62dcd5427f837f8a35bddae347b71a2bc1e7fc6") (collects #"racket" #"base.rkt") (collects #"racket" #"list.rkt") (collects #"racket" #"private" #"arity.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"syntax" #"name.rkt"))

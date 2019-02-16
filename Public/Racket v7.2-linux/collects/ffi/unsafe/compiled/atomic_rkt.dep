@@ -1,1 +1,0 @@
-("7.2" racket ("49f84fdc1615019688eb37e5174d2b5786017cb0" . "61d2bf108b494def942a79c910a9aa5836724b6e") (collects #"racket" #"base.rkt") (collects #"racket" #"private" #"place-local.rkt") (collects #"racket" #"runtime-config.rkt"))

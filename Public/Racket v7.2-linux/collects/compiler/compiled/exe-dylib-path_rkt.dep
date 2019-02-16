@@ -1,1 +1,0 @@
-("7.2" racket ("222c52f32fa02e43603e80a6ee0e61db62c8c155" . "4caeb15eeded6cf11cd511b7a747dcf7708b9c31") (collects #"compiler" #"private" #"macfw.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"contract" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))

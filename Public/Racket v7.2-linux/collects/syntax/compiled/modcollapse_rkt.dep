@@ -1,1 +1,0 @@
-("7.2" racket ("720e28ab87d67c91cecf5b333ccbadfd0bbff470" . "361031a6e7d1b34fb78a1f65bc1f7bfeef608733") (collects #"racket" #"base.rkt") (collects #"racket" #"contract" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"syntax" #"private" #"modcollapse-noctc.rkt"))

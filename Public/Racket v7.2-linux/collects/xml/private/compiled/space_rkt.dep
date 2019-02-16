@@ -1,1 +1,0 @@
-("7.2" racket ("4b0eb5bd1d80a23aa78270921a131fee390378ad" . "081f7565bff806440e29ad2506af89a8bb22a6aa") (collects #"racket" #"base.rkt") (collects #"racket" #"contract.rkt") (collects #"racket" #"list.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"xml" #"private" #"structures.rkt"))

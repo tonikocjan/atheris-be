@@ -1,1 +1,0 @@
-#hash((fs-change . #(supported scalable #f file-level)) (gc . 3m) (library-subpath . #"x86_64-linux") (library-subpath-convention . unix) (link . static) (machine . "x86_64-linux") (os . unix) (so-mode . local) (so-suffix . #".so") (target-machine . racket) (vm . racket) (word . 64))

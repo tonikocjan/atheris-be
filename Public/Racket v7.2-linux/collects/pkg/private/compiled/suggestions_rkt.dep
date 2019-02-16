@@ -1,1 +1,0 @@
-("7.2" racket ("739d84920dac1f59e000c60a1dfe134045e371cc" . "73094c468d7bd5f986934561511d987b0cb4bc1b") (collects #"pkg" #"db.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"path.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"set.rkt") (collects #"setup" #"dirs.rkt") (collects #"syntax" #"modcollapse.rkt"))

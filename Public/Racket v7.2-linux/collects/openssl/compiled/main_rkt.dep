@@ -1,1 +1,0 @@
-("7.2" racket ("df02e92a7ce0a205026adf4b4d9c526107bdf84c" . "1dc9af685515430dd7528687730a7fcb6a0f9340") (collects #"openssl" #"mzssl.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))

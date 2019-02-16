@@ -1,1 +1,0 @@
-("7.2" racket ("304921b8b6720b8204bd77d13a96e9ae71138d78" . "2525ba9ed8d54228322c73c3cd8f3d8ce0f29863") (collects #"racket" #"base.rkt") (collects #"racket" #"contract" #"private" #"rand.rkt") (collects #"racket" #"private" #"math-predicates.rkt") (collects #"racket" #"runtime-config.rkt"))

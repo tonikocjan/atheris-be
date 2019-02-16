@@ -1,1 +1,0 @@
-("7.2" racket ("4a5968a457de6136b699386ca4c69dba9ba38e8f" . "80ad37538c5a15069b6b4870c98c92c2be170067") (collects #"ffi" #"unsafe" #"define.rkt") (collects #"ffi" #"unsafe" #"objc.rkt") (collects #"ffi" #"unsafe.rkt") (collects #"openssl" #"private" #"add-cert.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))

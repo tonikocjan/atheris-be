@@ -1,1 +1,0 @@
-("7.2" racket ("cc9bf2710dd58bcb56b124544b824ae695edc793" . "8760ab6d39df2ac8432f91f9763f3297d53d484d") (collects #"racket" #"base.rkt") (collects #"racket" #"list.rkt") (collects #"racket" #"pretty.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"setup" #"path-to-relative.rkt") (collects #"syntax" #"srcloc.rkt"))

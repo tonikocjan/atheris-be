@@ -1,1 +1,0 @@
-("7.2" racket ("46b024d19b79086d014797e7041ee0e476f21d91" . "f5f2eaa6bb503354f30f3fa820070a57e8a7f8ab") (collects #"racket" #"private" #"ellipses.rkt") (collects #"racket" #"private" #"small-scheme.rkt") (collects #"racket" #"private" #"stx.rkt"))

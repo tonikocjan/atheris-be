@@ -1,1 +1,0 @@
-("7.2" racket ("f2c08f37cf26c17a8f7397f1479f0b52ee0fca04" . "9b5cfd23912640a7e1a391ff80a4ecbc8af4dfb2") (collects #"racket" #"base.rkt") (collects #"racket" #"match" #"patterns.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"struct-info.rkt") (collects #"syntax" #"apply-transformer.rkt") (collects #"syntax" #"boundmap.rkt"))

@@ -1,1 +1,0 @@
-("7.2" racket ("a06fc636e7ec75dceaba9919d314ac0c4f608c29" . "029352b3d784d89e2f31bbad51348e1cb3dc90eb") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"syntax" #"parse" #"private" #"kws.rkt") (collects #"syntax" #"parse" #"private" #"residual-ct.rkt") (collects #"syntax" #"parse" #"private" #"residual.rkt"))

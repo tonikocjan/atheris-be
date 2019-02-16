@@ -1,1 +1,0 @@
-#hash((fs-change . #(supported #f low-latency file-level)) (gc . 3m) (library-subpath . #"x86_64-macosx") (library-subpath-convention . unix) (link . framework) (machine . "x86_64-macosx") (os . macosx) (so-mode . local) (so-suffix . #".dylib") (vm . racket) (word . 64))

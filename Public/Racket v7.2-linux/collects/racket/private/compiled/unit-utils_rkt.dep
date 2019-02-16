@@ -1,1 +1,0 @@
-("7.2" racket ("0e902b9813023cbcf5350ec11de0230fca038730" . "0c7490a115d6bd3510e011d139e864837652d731") (collects #"racket" #"base.rkt") (collects #"racket" #"contract" #"base.rkt") (collects #"racket" #"private" #"unit-compiletime.rkt") (collects #"racket" #"private" #"unit-syntax.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"syntax" #"boundmap.rkt"))

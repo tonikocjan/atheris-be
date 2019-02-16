@@ -1,1 +1,0 @@
-("7.2" racket ("5934b2b3b90cb993bd7eb628c6668e1ec68e7ca7" . "416cbc693c6d3605c29627fa76e80aebe52a60dc") (collects #"compiler" #"private" #"cm-minimal.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"contract" #"base.rkt") (collects #"racket" #"path.rkt") (collects #"racket" #"place.rkt") (collects #"racket" #"promise.rkt") (collects #"racket" #"runtime-config.rkt"))

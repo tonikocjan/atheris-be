@@ -1,9 +1,0 @@
-CC=gcc
-CFLAGS=-Wall   -g -O2  -pthread
-OPTIONS= -DUSE_SENORA_GC
-MZOPTIONS=
-LDFLAGS= -pthread
-LIBS=-ldl -lm  -ldl -lm -rdynamic 
-MROPTIONS=
-MRLIBS=
-MRLDFLAGS=-pthread -L../racket

@@ -22,7 +22,7 @@ public class Executor: ExecutorProtocol {
     task.launchPath = "racket"
     task.launch()
     task.waitUntilExit()
-    task.terminationHandler = {
+    task.terminationHandler = { _ in
       let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
                           encoding: .utf8)
       completion(result ?? "")

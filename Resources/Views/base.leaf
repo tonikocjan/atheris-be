@@ -4,6 +4,7 @@
 	<title>#get(title)</title>
 	<link rel="stylesheet" href="/styles/app.css" />
   <link rel="stylesheet" href="/styles/default.css"/>
+  <link rel="stylesheet" href="/styles/atheris.css"/>
   <script src="highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script src="lib/codemirror.js"></script>

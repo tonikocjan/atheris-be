@@ -1,7 +1,8 @@
-#if(output) {
-<div style="width: auto">
-  <pre>
-    <code class="html">#(output)</code>
-  </pre>
-</div>
-}
+<pre style="height: 93%;">
+  #if(output) {
+  <code class="html">#(output)</code>
+  }
+  #if(error) {
+    <code class="html hljs-string">#(error)</code>
+  }
+</pre>

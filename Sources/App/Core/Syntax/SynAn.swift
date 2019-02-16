@@ -35,6 +35,7 @@ public class SynAn: SyntaxParser {
   }
   
   public func parse() throws -> AstBindings {
+    if symbol.token == .eof { return AstBindings(position: .zero, bindings: []) }
     return try parseBindings(separated: ";", stop: .eof)
   }
 }

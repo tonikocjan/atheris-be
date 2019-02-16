@@ -1,53 +1,60 @@
 import Vapor
 
 struct Output: Encodable {
-  var compilerName = "atheris"
-  var compilerVersion = "0.1.2"
-  var consoleStack = [String]()
-  var racketCode: String? = ""
-  var smlCode: String? = ""
-  var error: String? = ""
+  let compilerName = "atheris"
+  let compilerVersion = "0.1.2"
+  let consoleStack: [String]
+  let racketCode: String?
+  let smlCode: String?
+  let error: String?
 }
-
-var requestOutput = Output()
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
   router.get { req in
-    return try req.view().render("compiler", requestOutput)
+    return try req.view().render("compiler", Output(consoleStack: [],
+                                                    racketCode: nil,
+                                                    smlCode: nil,
+                                                    error: nil))
   }
   
   router.post(CompileRequest.self) { req, compile -> Future<View> in
+    guard !compile.code.isEmpty else {
+      let output = Output(consoleStack: [], racketCode: nil, smlCode: nil, error: nil)
+      return try req.view().render("compiler", output)
+    }
+    
     #if os(Linux)
     let code = compile.code.replacingOccurrences(of: "\r", with: "", options: .regularExpression)
     #else
     let code = compile.code.replacingOccurrences(of: "\r", with: "")
     #endif
     let stream = TextStream(string: code)
-    requestOutput.smlCode = code
     
     do {
       let atheris = try Atheris(inputStream: stream)
       let output = try atheris.compile() as! TextOutputStream
       let fileOutputStream = FileOutputStream(fileWriter: try FileWriter(fileUrl: URL(string: "code")!))
       fileOutputStream.print(output.buffer)
-      requestOutput.racketCode = output.buffer
       
       let promise = req.eventLoop.newPromise(View.self)
       try Executor().execute(file: "code") { result in
-        requestOutput.consoleStack.insert(result, at: 0)
-        requestOutput.error = nil
         _ = try? req
           .view()
-          .render("compiler", requestOutput)
+          .render("compiler", Output(consoleStack: [result],
+                                     racketCode: output.buffer,
+                                     smlCode: code,
+                                     error: nil))
           .do { promise.succeed(result: $0) }
       }
       return promise.futureResult
     } catch {
       let errorMessage = (error as? AtherisError)?.errorMessage ?? error.localizedDescription.replacingOccurrences(of: "\n", with: "\r\n")
-      requestOutput.error = errorMessage
-      requestOutput.racketCode = nil
-      return try req.view().render("compiler", requestOutput)
+      let output = Output(consoleStack: [],
+             racketCode: nil,
+             smlCode: code,
+             error: errorMessage)
+      return try req.view().render("compiler", output)
     }
   }
 }

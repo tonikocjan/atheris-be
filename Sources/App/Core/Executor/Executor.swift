@@ -9,22 +9,27 @@
 import Foundation
 
 public protocol ExecutorProtocol {
-  func execute(file: String) throws
+  func execute(file: String, completion: @escaping (String) -> Void) throws
 }
 
 public class Executor: ExecutorProtocol {
-  public func execute(file: String) throws {
+  public func execute(file: String, completion: @escaping (String) -> Void) throws {
     print("Executing \(file) ...")
     
+    let pipe = Pipe()
     let task = Process()
     task.arguments = [file]
+    task.standardOutput = pipe
     task.currentDirectoryPath = FileManager.default.currentDirectoryPath
-    // TODO: - Need to add `Racket` inside project
-    task.launchPath = "/Applications/Racket v7.1/bin/racket"
+    task.launchPath = "Racket v7.1/bin/racket"
     task.launch()
     task.waitUntilExit()
     task.terminationHandler = {
       print("\nExecution ended with status: \($0.terminationStatus)")
+      
+      let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
+                          encoding: .utf8)
+      completion(result ?? "")
     }
   }
 }

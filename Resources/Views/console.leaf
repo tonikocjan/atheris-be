@@ -1,0 +1,9 @@
+<div style="width: 100%; height: 100%">
+  <div id="console-loader" class="lds-roller" style="display: none"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  
+  <div id="console" style="display: block; height: 100%">
+    <pre style="height: 93%;">
+      <code class="html">#(result)</code>
+    </pre>
+  </div>
+</div>

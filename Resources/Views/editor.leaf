@@ -1,6 +1,6 @@
 <form action="/" method="POST">
   <textarea
-    id="code"
+    id="textarea1"
     style="width: 100%; background-color: #f2f2ef;"
     name="code"
     placeholder="Enter SML code ..."
@@ -8,9 +8,13 @@
     cols="50"
     autofocus="true">#(code)</textarea>
   <div class="run">
-    <input type="image" src="/images/rocket.png" style="width: 55px; height: 55px">
+    <input id="compile-btn" onclick="showHide()" type="image" src="/images/rocket.png" style="width: 55px; height: 55px">
   </div>
 </form>
 <script>
-  var editor = CodeMirror.fromTextArea(code, {lineNumbers: true});
+  var editor = CodeMirror.fromTextArea(textarea1, {lineNumbers: true});
+  function showHide() {
+    document.getElementById("code").style.display = "none";
+    document.getElementById("code-loader").style.display = "block";
+  }
 </script>

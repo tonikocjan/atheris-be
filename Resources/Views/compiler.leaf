@@ -1,11 +1,20 @@
 #set("title") { 🚀🚀🚀 }
 #set("body") {
-<div class="base" style="height: 70%">
-  <div class="nested" style="float: left; margin-left: 15pt;">
+<div class="base" style="height: 50%">
+  <div class="nested" style="float: left;">
     #embed("editor")
   </div>
-  <div class="nested" style="float: right; margin-right: 15pt;">
+  <div class="nested" style="float: right;">
     #embed("code")
+  </div>
+</div>
+
+<div style="height: 20px">
+</div>
+
+<div class="base" style="height: 30%">
+  <div class="nested-bottom">
+    #embed("console")
   </div>
 </div>
 }

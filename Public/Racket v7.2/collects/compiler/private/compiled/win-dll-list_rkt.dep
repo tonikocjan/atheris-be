@@ -1,0 +1,1 @@
+("7.2" racket ("e49cf2388805fad6a2ac201c8a5eeb1d50c766cd" . "5ec433a10f4ce89c7a8265a6ce36e85727c240c8") (collects #"dynext" #"filename-version.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"setup" #"dirs.rkt"))

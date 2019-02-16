@@ -1,0 +1,1 @@
+("7.2" racket ("1db0081fc00dc333b57b1637f870e7b8d31bff91" . "2d95c84fb658d3a179f1e35a6ee2d3d02c5a30d2") (collects #"ffi" #"unsafe" #"atomic.rkt") (collects #"ffi" #"unsafe" #"define.rkt") (collects #"ffi" #"unsafe.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"stxparam.rkt"))

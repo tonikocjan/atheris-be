@@ -1,0 +1,1 @@
+("7.2" racket ("809f039104a5fb816fbbb033b9e1e25a2900c8da" . "c0ace20314651ca29cf7f42dee3eaea2ea2293fc") (collects #"racket" #"base.rkt") (collects #"racket" #"cmdline.rkt") (collects #"racket" #"file.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"setup" #"cross-system.rkt"))

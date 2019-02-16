@@ -1,0 +1,1 @@
+("7.2" racket ("5296ffcfccc8d719ff91e6c30622aa7304834b41" . "3fbf28ae8c2d6f958ff143a843132dd1a2f9cd09") (collects #"racket" #"base.rkt") (collects #"racket" #"promise.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"setup" #"cross-system.rkt") (collects #"setup" #"dirs.rkt"))

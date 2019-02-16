@@ -1,0 +1,1 @@
+("7.2" racket ("eb1f7844bb48a2fb2aabb5058a487c81d6ab5db3" . "b6999df3d641dc609384012a86b7115cad55761d") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"syntax" #"modcode.rkt") (collects #"syntax" #"modcollapse.rkt") (collects #"syntax" #"modread.rkt") (collects #"syntax" #"modresolve.rkt"))

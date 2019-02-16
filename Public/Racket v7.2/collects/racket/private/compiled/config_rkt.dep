@@ -1,0 +1,1 @@
+("7.2" racket ("2dee1da5125e01ca0c449ccda888bfbdd4f41ee7" . "d6ad6133f5079b598b57742b7aa6fd8bfad61d10") (collects #"racket" #"private" #"cond.rkt") (collects #"racket" #"private" #"executable-path.rkt") (collects #"racket" #"private" #"qq-and-or.rkt"))

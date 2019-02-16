@@ -1,0 +1,1 @@
+("7.2" racket ("3f26d21070b43a47d6d0d2f912bdd54f6b0b8491" . "0758965209a525a0be8e41395c80e2f1dc61c2b5") (collects #"ffi" #"unsafe.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"fixnum.rkt") (collects #"racket" #"flonum.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"tcp.rkt") (collects #"racket" #"vector.rkt"))

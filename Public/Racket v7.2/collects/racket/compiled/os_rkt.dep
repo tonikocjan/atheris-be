@@ -1,0 +1,1 @@
+("7.2" racket ("8fe1b9707c7bbdeb2d86c9dba50208e2cff6d598" . "28837881fc49857d00d112809dbde0c1251d1e79") (collects #"ffi" #"cvector.rkt") (collects #"ffi" #"unsafe.rkt") (collects #"ffi" #"winapi.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"contract.rkt") (collects #"racket" #"promise.rkt") (collects #"racket" #"runtime-config.rkt"))

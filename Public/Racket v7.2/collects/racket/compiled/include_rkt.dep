@@ -1,0 +1,1 @@
+("7.2" racket ("00761e52e5accd4b61e4e38f1cb8a384a3a700f2" . "1da3f9d0666804b0b685c543a9768d4f50aa1ff7") (collects #"compiler" #"cm-accomplice.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"path.rkt") (collects #"racket" #"private" #"increader.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"syntax" #"path-spec.rkt"))

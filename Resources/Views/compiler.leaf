@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div style="height: 20px">
+<div class="spacing">
 </div>
 
 <div class="base" style="height: 30%">
@@ -17,5 +17,17 @@
     #embed("console")
   </div>
 </div>
+
+<div class="spacing">
+</div>
+
+<div class="base">
+  <h1 class="title">SML examples:</h1>
+  #embed("examples")
+</div>
+
+<div class="spacing">
+</div>
+
 }
 #embed("base")

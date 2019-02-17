@@ -45,6 +45,25 @@
   border-radius: 4px;
 }
 
+.spacing {
+  height: 20px;
+}
+
+.title {
+  color: #fff;
+}
+
+.example {
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 4px;
+  border-color: #08072c;
+  border-width: 10px;
+  padding: 0;
+}
+
+/* loader */
+
 .lds-roller {
   position: absolute;
   z-index: 100;

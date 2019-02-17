@@ -19,7 +19,7 @@ public class Executor: ExecutorProtocol {
     task.arguments = [file]
     task.standardOutput = pipe
     task.currentDirectoryPath = FileManager.default.currentDirectoryPath
-    task.launchPath = "racket"
+    task.launchPath = "/Applications/Racket v7.1/bin/racket"
     task.launch()
     task.waitUntilExit()
     task.terminationHandler = { _ in

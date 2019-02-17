@@ -7,6 +7,7 @@ struct Output: Encodable {
   let racketCode: String?
   let smlCode: String?
   let error: String?
+  let smlExamples: [String]
 }
 
 /// Register your application's routes here.
@@ -15,20 +16,21 @@ public func routes(_ router: Router) throws {
     return try req.view().render("compiler", Output(consoleStack: [],
                                                     racketCode: nil,
                                                     smlCode: nil,
-                                                    error: nil))
+                                                    error: nil,
+                                                    smlExamples: predefinedSmlExamples))
   }
   
   router.post(CompileRequest.self) { req, compile -> Future<View> in
     guard !compile.code.isEmpty else {
-      let output = Output(consoleStack: [], racketCode: nil, smlCode: nil, error: nil)
+      let output = Output(consoleStack: [],
+                          racketCode: nil,
+                          smlCode: nil,
+                          error: nil,
+                          smlExamples: predefinedSmlExamples)
       return try req.view().render("compiler", output)
     }
     
-    #if os(Linux)
-    let code = compile.code.replacingOccurrences(of: "\r", with: "", options: .regularExpression)
-    #else
-    let code = compile.code.replacingOccurrences(of: "\r", with: "")
-    #endif
+    let code = compile.code.removeLineBreaks()
     let stream = TextStream(string: code)
     
     do {
@@ -44,16 +46,19 @@ public func routes(_ router: Router) throws {
           .render("compiler", Output(consoleStack: [result],
                                      racketCode: output.buffer,
                                      smlCode: code,
-                                     error: nil))
+                                     error: nil,
+                                     smlExamples: predefinedSmlExamples))
           .do { promise.succeed(result: $0) }
       }
       return promise.futureResult
     } catch {
-      let errorMessage = (error as? AtherisError)?.errorMessage ?? error.localizedDescription.replacingOccurrences(of: "\n", with: "\r\n")
+      let errorMessage = ((error as? AtherisError)?.errorMessage ?? error.localizedDescription)
+        .replacingOccurrences(of: "\n", with: "\r\n\t")
       let output = Output(consoleStack: [],
              racketCode: nil,
              smlCode: code,
-             error: errorMessage)
+             error: errorMessage,
+             smlExamples: predefinedSmlExamples)
       return try req.view().render("compiler", output)
     }
   }

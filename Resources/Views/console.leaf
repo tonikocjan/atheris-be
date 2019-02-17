@@ -3,7 +3,7 @@
   
   <div id="console" style="display: block; height: 100%">
       <code class="html hljs lisp">
-        #for(output in consoleStack) {
+        #for(output in consoleStack){
         <span class="hljs-number">#(compilerName) [#(compilerVersion)]:</span>
         <span class="hljs-comment">#(output)</span>
         <br>

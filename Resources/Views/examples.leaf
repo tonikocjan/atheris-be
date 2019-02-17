@@ -1,6 +1,6 @@
 #for(example in smlExamples){
 <div style="padding: 15px;">
-  <div class="example hljs lisp">
+  <div class="example hljs lisp" data-clipboard-target="#example-#(index)">
     <pre>
       <code id="example-#(index)" class="html">#(example)</code>
     </pre>
@@ -13,5 +13,6 @@
 <script>
   (function(){
    new ClipboardJS(".copy-button");
+   new ClipboardJS(".example");
    })();
 </script>

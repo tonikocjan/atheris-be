@@ -1,33 +1,33 @@
 #set("title") { 🚀🚀🚀 }
 #set("body") {
-<div class="base" style="height: 50%">
-  <div class="nested" style="float: left;">
-    #embed("editor")
-  </div>
-  <div class="nested" style="float: right;">
-    #embed("code")
-  </div>
-</div>
 
-<div class="spacing">
-</div>
-
-<div class="base" style="height: 30%">
-  <div class="nested-bottom">
-    #embed("console")
+<div class="sidebar">
+  <div class="base">
+    <h1 class="title">SML examples:</h1>
+    #embed("examples")
   </div>
 </div>
 
-<div class="spacing">
+<div style="height: 100%; margin-left: 400px;">
+  <h1 class="title">Editor</h1>
+  
+  <div class="base" style="height: 45%; width: 95%;">
+    <div class="nested editor" style="float: left; width: 50%">
+      #embed("editor")
+    </div>
+    <div style="background: #5270ff; width: 2px; height: 100%; float: left;"> </div>
+    <div class="nested" style="float: right; width: 49%;">
+      #embed("code")
+    </div>
+  </div>
+  
+  <div class="spacing"></div>
+  
+  <div class="base" style="height: 30%; width: 95%;">
+    <div class="nested-bottom">
+      #embed("console")
+    </div>
+  </div>
 </div>
-
-<div class="base">
-  <h1 class="title">SML examples:</h1>
-  #embed("examples")
-</div>
-
-<div class="spacing">
-</div>
-
 }
 #embed("base")

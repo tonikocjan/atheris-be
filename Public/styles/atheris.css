@@ -1,21 +1,25 @@
+.sidebar {
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+}
+
 .base {
-  background-color: #7fb3d5;
+  background-color: #fafafa;
   border-radius: 4px;
   border-color: #08072c;
   border-width: 10px;
-  height: auto;
-  width: 70%;
-  margin: 0 auto 0;
   padding: 25px;
 }
 
 .nested {
-  overflow: hidden;
   background-color: #fff;
   border-radius: 4px;
   border-color: #08072c;
-  border-width: 10px;
-  width: 45%;
+  border-width: 10px;;
   height: 100%;
 }
 
@@ -28,21 +32,32 @@
   height: 100%;
 }
 
-.run {
-  z-index: 100;
-  position: absolute;
-  center: 0 auto 0;
-  
-  position: absolute;
-  left: 50%;
-  top: 35%;
-  -webkit-transform: translate(-50%, -35%);
-  transform: translate(-50%, -35%);
+.base-form {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.btn {
+.editor {
+  width: 100%;
+  height: 100%;
+}
+
+.run {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  right: -28px;
+  margin: -32px 0 0 -50px;
+  background: #fff;
+}
+
+.btn-compile {
+  z-index: 200;
   border: solid 2px #5270ff;
   border-radius: 4px;
+  width: 55px; 
+  height: 55px
 }
 
 .spacing {
@@ -50,7 +65,7 @@
 }
 
 .title {
-  color: #fff;
+  color: black;
 }
 
 .example {
@@ -62,20 +77,29 @@
   padding: 0;
 }
 
+.copy-button {
+  display: none;
+  position: absolute;
+  float: right;
+  margin: 0 auto;
+}
+
+.example:hover + .copy-button, .copy-button:hover {
+  display: inline-block;
+}
+
 /* loader */
 
 .lds-roller {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -32px 0 0 -50px;
+  position: absolute;
   z-index: 100;
-  center: 0 auto 0;
-  left: 69%;
-  top: 24%;
-  -webkit-transform: translate(50%, -50%);
-  transform: translate(-50%, -50%);
   display: inline-block;
   width: 64px;
   height: 64px;
-  margin: 40px auto;
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

@@ -1,14 +1,12 @@
-<form action="/" method="POST">
+<form action="/" method="POST" class="base-form">
   <textarea
     id="textarea1"
-    style="width: 100%; background-color: #f2f2ef;"
+    class="editor"
     name="code"
     placeholder="Enter SML code ..."
-    rows="20"
-    cols="50"
     autofocus="true">#(smlCode)</textarea>
   <div class="run">
-    <input id="compile-btn" class="btn" onclick="showHide()" type="image" src="/images/rocket.png" style="width: 55px; height: 55px">
+    <input id="compile-btn" class="btn-compile" onclick="showHide()" type="image" src="/images/rocket.png">
   </div>
 </form>
 <script>

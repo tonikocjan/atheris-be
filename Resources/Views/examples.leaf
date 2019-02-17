@@ -2,8 +2,19 @@
 <div style="padding: 15px;">
   <div class="example hljs lisp" style="padding:0;">
     <pre>
-      <code class="html">#(example)</code>
+      <code id="#(index)-example" class="html">#(example)</code>
     </pre>
   </div>
+  <button id="#(index)" class="copy-button" onclick="copy(this.id)">Copy</button>
 </div>
 }
+<script>
+  function copy(id) {
+    var code = document.getElementById(id + "-example").textContent;
+    navigator.clipboard.writeText(code).then(function() {
+                                             console.log('Async: Copying to clipboard was successful!');
+                                             }, function(err) {
+                                             console.error('Async: Could not copy text: ', err);
+                                             });
+  }
+</script>

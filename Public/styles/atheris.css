@@ -80,12 +80,14 @@
 .copy-button {
   display: none;
   position: absolute;
-  float: right;
-  margin: 0 auto;
+}
+
+.example:hover {
+  background: rgba(0,0,0,0.05);
 }
 
 .example:hover + .copy-button, .copy-button:hover {
-  display: inline-block;
+  display: block;
 }
 
 /* loader */

@@ -4,7 +4,7 @@
   <div id="code" style="display: block; height: 100%">
     <pre style="height: 90%; margin-top: 0;">
       #if(racketCode) {
-      <code class="html" style="padding-left: 30px; padding-top: 0px;">#(racketCode)</code>
+      <code class="html" style="padding-left: 40px; padding-top: 0px;">#(racketCode)</code>
       } elseif(error) {
       <code class="html hljs-string">#(error)</code>
       } else {

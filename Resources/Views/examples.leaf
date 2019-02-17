@@ -1,20 +1,17 @@
 #for(example in smlExamples){
 <div style="padding: 15px;">
-  <div class="example hljs lisp" style="padding:0;">
+  <div class="example hljs lisp">
     <pre>
-      <code id="#(index)-example" class="html">#(example)</code>
+      <code id="example-#(index)" class="html">#(example)</code>
     </pre>
   </div>
-  <button id="#(index)" class="copy-button" onclick="copy(this.id)">Copy</button>
+  <button id="#(index)" class="copy-button" data-clipboard-target="#example-#(index)">
+    <img src="images/clippy.svg" alt="Copy to clipboard" style="width: 15px; height: 15px;">
+  </button>
 </div>
 }
 <script>
-  function copy(id) {
-    var code = document.getElementById(id + "-example").textContent;
-    navigator.clipboard.writeText(code).then(function() {
-                                             console.log('Async: Copying to clipboard was successful!');
-                                             }, function(err) {
-                                             console.error('Async: Could not copy text: ', err);
-                                             });
-  }
+  (function(){
+   new ClipboardJS(".copy-button");
+   })();
 </script>

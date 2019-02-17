@@ -14,12 +14,18 @@ public protocol ExecutorProtocol {
 
 public class Executor: ExecutorProtocol {
   public func execute(file: String, completion: @escaping (String) -> Void) throws {
+    #if os(Linux)
+    let launchPath = "racket"
+    #else
+    let launchPath = "/Applications/Racket v7.1/bin/racket"
+    #endif
+    
     let pipe = Pipe()
     let task = Process()
     task.arguments = [file]
     task.standardOutput = pipe
     task.currentDirectoryPath = FileManager.default.currentDirectoryPath
-    task.launchPath = "/Applications/Racket v7.1/bin/racket"
+    task.launchPath = launchPath
     task.launch()
     task.waitUntilExit()
     task.terminationHandler = { _ in

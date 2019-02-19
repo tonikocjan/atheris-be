@@ -14,24 +14,25 @@ public protocol ExecutorProtocol {
 
 public class Executor: ExecutorProtocol {
   public func execute(file: String, completion: @escaping (String) -> Void) throws {
-    #if os(Linux)
-    let launchPath = "racket"
-    #else
-    let launchPath = "/Applications/Racket v7.1/bin/racket"
-    #endif
-    
-    let pipe = Pipe()
-    let task = Process()
-    task.arguments = [file]
-    task.standardOutput = pipe
-    task.currentDirectoryPath = FileManager.default.currentDirectoryPath
-    task.launchPath = launchPath
-    task.launch()
-    task.waitUntilExit()
-    task.terminationHandler = { _ in
-      let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
-                          encoding: .utf8)
-      completion(result ?? "")
-    }
+    completion(FileManager.default.currentDirectoryPath)
+//    #if os(Linux)
+//    let launchPath = "/Public/Racket v7.2-linux/bin/racket"
+//    #else
+//    let launchPath = "/Applications/Racket v7.1/bin/racket"
+//    #endif
+//
+//    let pipe = Pipe()
+//    let task = Process()
+//    task.arguments = [file]
+//    task.standardOutput = pipe
+//    task.currentDirectoryPath = FileManager.default.currentDirectoryPath
+//    task.launchPath = launchPath
+//    task.launch()
+//    task.waitUntilExit()
+//    task.terminationHandler = { _ in
+//      let result = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),
+//                          encoding: .utf8)
+//      completion(result ?? "")
+//    }
   }
 }

@@ -1,0 +1,1 @@
+("7.2" racket ("37bef4391e121bec9564a838ab00ef7a79655bb9" . "6240de8b3aa5a6626efddef7b04706c76f8ae9b8") (collects #"file" #"gzip.rkt") (collects #"net" #"base64.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"file.rkt") (collects #"racket" #"port.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"system.rkt") (collects #"setup" #"getinfo.rkt"))

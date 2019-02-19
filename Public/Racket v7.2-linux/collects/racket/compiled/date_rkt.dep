@@ -1,0 +1,1 @@
+("7.2" racket ("c0bfc68107e632f14404847ea30e09b70f924527" . "004f4a9370288021cb835efc19bf6ed6263ff5a2") (collects #"racket" #"base.rkt") (collects #"racket" #"contract" #"base.rkt") (collects #"racket" #"promise.rkt") (collects #"racket" #"runtime-config.rkt"))

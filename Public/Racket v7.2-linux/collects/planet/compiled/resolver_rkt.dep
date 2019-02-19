@@ -1,0 +1,1 @@
+("7.2" racket ("1aba0f6ca3586308d1adb44b790ca7acb30679ea" . "c40e67509ef903d2e26b9fbfa45f1fbe92468e2f") (collects #"planet" #"private" #"resolver.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))

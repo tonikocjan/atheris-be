@@ -1,0 +1,1 @@
+("7.2" racket ("04f0a76941304b57c9b9099aa2b140d2ef766d06" . "cf9c34e63a09ef22f736f1db106d99a39fbf04db") (collects #"net" #"url-connect.rkt") (collects #"net" #"url.rkt") (collects #"pkg" #"private" #"config.rkt") (collects #"pkg" #"private" #"print.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"format.rkt") (collects #"racket" #"runtime-config.rkt"))

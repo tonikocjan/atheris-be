@@ -1,0 +1,1 @@
+("7.2" racket ("a655d326f32b187bc53d4d88692755e121314ecf" . "5344acc5903ec0b96be38a2c1572f6812ff77ab5") (collects #"compiler" #"private" #"mach-o.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"setup" #"dirs.rkt"))

@@ -1,0 +1,1 @@
+("7.2" racket ("1b3e91eddedae9ab031a36dc055b2c4b641445c2" . "1a8dd16058d8fd5699b4fad9a584120602600133") (collects #"data" #"bit-vector.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"serialize.rkt"))

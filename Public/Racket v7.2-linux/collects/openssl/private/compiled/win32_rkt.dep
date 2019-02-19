@@ -1,0 +1,1 @@
+("7.2" racket ("2e6279854e414ae4fa83adbb85ae1c7eacea91fb" . "63c05154fda3369e3a1532126c155e542b1e1b07") (collects #"ffi" #"unsafe" #"alloc.rkt") (collects #"ffi" #"unsafe" #"define.rkt") (collects #"ffi" #"unsafe.rkt") (collects #"ffi" #"winapi.rkt") (collects #"openssl" #"private" #"add-cert.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))

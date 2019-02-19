@@ -1,0 +1,1 @@
+("7.2" racket ("357ecfe9c78f214c3d3792aa2fc3f47907359460" . "7a1e0bc86146b08ce44015562edc9272daa66bc7") (collects #"ffi" #"unsafe" #"objc.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))
